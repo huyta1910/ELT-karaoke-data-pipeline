@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: analytics_raw
+    database: caramel-spot-474502-p2
+    schema: analytics_raw
+    tables:
+      - name: raw_cuahang
+      - name: raw_ca
+      - name: raw_transactions
+      - name: raw_hoadon_combo_hanghoa
+      - name: raw_hanghoa
+      - name: raw_hoadon_giamgia
+      - name: raw_hoadon_chitiethanghoa
