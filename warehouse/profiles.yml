@@ -1,0 +1,11 @@
+warehouse:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: caramel-spot-474502-p2
+      dataset: analytics_transform
+      threads: 4
+      keyfile: /opt/airflow/karaoke/credentials.json
+      location: northamerica-northeast1

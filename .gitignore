@@ -4,3 +4,6 @@ venv/
 credentials.json
 __pycache__/
 *.pyc
+logs/
+warehouse/.dbt/profiles.yml
+warehouse/target/

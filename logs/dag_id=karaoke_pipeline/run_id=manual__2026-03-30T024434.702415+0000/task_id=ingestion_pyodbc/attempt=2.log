@@ -1,0 +1,40 @@
+[2026-03-30T02:49:40.989+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: karaoke_pipeline.ingestion_pyodbc manual__2026-03-30T02:44:34.702415+00:00 [queued]>
+[2026-03-30T02:49:40.994+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: karaoke_pipeline.ingestion_pyodbc manual__2026-03-30T02:44:34.702415+00:00 [queued]>
+[2026-03-30T02:49:40.994+0000] {taskinstance.py:2193} INFO - Starting attempt 2 of 2
+[2026-03-30T02:49:41.003+0000] {taskinstance.py:2217} INFO - Executing <Task(BashOperator): ingestion_pyodbc> on 2026-03-30 02:44:34.702415+00:00
+[2026-03-30T02:49:41.007+0000] {standard_task_runner.py:60} INFO - Started process 237 to run task
+[2026-03-30T02:49:41.009+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'karaoke_pipeline', 'ingestion_pyodbc', 'manual__2026-03-30T02:44:34.702415+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/karaoke_pipeline.py', '--cfg-path', '/tmp/tmpl6gecwjt']
+[2026-03-30T02:49:41.011+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask ingestion_pyodbc
+[2026-03-30T02:49:41.071+0000] {task_command.py:423} INFO - Running <TaskInstance: karaoke_pipeline.ingestion_pyodbc manual__2026-03-30T02:44:34.702415+00:00 [running]> on host 351a8bedf1f8
+[2026-03-30T02:49:41.118+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='karaoke_team' AIRFLOW_CTX_DAG_ID='karaoke_pipeline' AIRFLOW_CTX_TASK_ID='ingestion_pyodbc' AIRFLOW_CTX_EXECUTION_DATE='2026-03-30T02:44:34.702415+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-30T02:44:34.702415+00:00'
+[2026-03-30T02:49:41.119+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-30T02:49:41.119+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/karaoke/ingestion && python el.py']
+[2026-03-30T02:49:41.128+0000] {subprocess.py:86} INFO - Output:
+[2026-03-30T02:49:42.409+0000] {subprocess.py:93} INFO - 2026-03-30 02:49:42,409 - INFO - --- Starting Free-Tier Compatible Pipeline ---
+[2026-03-30T02:49:45.152+0000] {subprocess.py:93} INFO - 2026-03-30 02:49:45,152 - INFO - Incremental Load: Fetching dbo.HoaDon_ChiTietHangHoa where created_date > '2116-01-02 08:11:52.000'
+[2026-03-30T02:49:45.183+0000] {subprocess.py:93} INFO - 2026-03-30 02:49:45,183 - ERROR - Failed to process raw_hoadon_chitiethanghoa: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]SSL Provider: [error:0A00014D:SSL routines::legacy sigalg disallowed or unsupported] (-1) (SQLDriverConnect)')
+[2026-03-30T02:49:45.184+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-03-30T02:49:45.184+0000] {subprocess.py:93} INFO -   File "/opt/***/karaoke/ingestion/el.py", line 175, in <module>
+[2026-03-30T02:49:45.185+0000] {subprocess.py:93} INFO -     main()
+[2026-03-30T02:49:45.186+0000] {subprocess.py:93} INFO -   File "/opt/***/karaoke/ingestion/el.py", line 172, in main
+[2026-03-30T02:49:45.187+0000] {subprocess.py:93} INFO -     process_table(bigquery_client, table_config)
+[2026-03-30T02:49:45.187+0000] {subprocess.py:93} INFO -   File "/opt/***/karaoke/ingestion/el.py", line 114, in process_table
+[2026-03-30T02:49:45.188+0000] {subprocess.py:93} INFO -     with pyodbc.connect(conn_str, autocommit=True) as conn:
+[2026-03-30T02:49:45.189+0000] {subprocess.py:93} INFO -          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-03-30T02:49:45.192+0000] {subprocess.py:93} INFO - pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]SSL Provider: [error:0A00014D:SSL routines::legacy sigalg disallowed or unsupported] (-1) (SQLDriverConnect)')
+[2026-03-30T02:49:45.320+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-03-30T02:49:45.327+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-03-30T02:49:45.330+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=karaoke_pipeline, task_id=ingestion_pyodbc, execution_date=20260330T024434, start_date=20260330T024940, end_date=20260330T024945
+[2026-03-30T02:49:45.345+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 6 for task ingestion_pyodbc (Bash command failed. The command returned a non-zero exit code 1.; 237)
+[2026-03-30T02:49:45.359+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-03-30T02:49:45.375+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

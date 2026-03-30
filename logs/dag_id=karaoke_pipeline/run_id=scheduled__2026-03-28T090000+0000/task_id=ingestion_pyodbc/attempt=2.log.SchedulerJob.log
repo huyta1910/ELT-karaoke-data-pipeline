@@ -1,0 +1,2 @@
+[2026-03-29T01:27:29.429+0000] {task_context_logger.py:104} WARNING - Marking task instance <TaskInstance: karaoke_pipeline.ingestion_pyodbc scheduled__2026-03-28T09:00:00+00:00 [queued]> stuck in queued as failed. If the task instance has available retries, it will be retried.
+[2026-03-29T01:27:30.462+0000] {task_context_logger.py:104} ERROR - Executor reports task instance <TaskInstance: karaoke_pipeline.ingestion_pyodbc scheduled__2026-03-28T09:00:00+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

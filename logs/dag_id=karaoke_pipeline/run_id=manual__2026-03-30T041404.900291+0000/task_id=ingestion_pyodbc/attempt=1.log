@@ -1,0 +1,53 @@
+[2026-03-30T04:14:05.808+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: karaoke_pipeline.ingestion_pyodbc manual__2026-03-30T04:14:04.900291+00:00 [queued]>
+[2026-03-30T04:14:05.816+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: karaoke_pipeline.ingestion_pyodbc manual__2026-03-30T04:14:04.900291+00:00 [queued]>
+[2026-03-30T04:14:05.816+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2026-03-30T04:14:05.829+0000] {taskinstance.py:2217} INFO - Executing <Task(BashOperator): ingestion_pyodbc> on 2026-03-30 04:14:04.900291+00:00
+[2026-03-30T04:14:05.837+0000] {standard_task_runner.py:60} INFO - Started process 227 to run task
+[2026-03-30T04:14:05.848+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'karaoke_pipeline', 'ingestion_pyodbc', 'manual__2026-03-30T04:14:04.900291+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/karaoke_pipeline.py', '--cfg-path', '/tmp/tmpo3b6w07d']
+[2026-03-30T04:14:05.857+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask ingestion_pyodbc
+[2026-03-30T04:14:06.039+0000] {task_command.py:423} INFO - Running <TaskInstance: karaoke_pipeline.ingestion_pyodbc manual__2026-03-30T04:14:04.900291+00:00 [running]> on host 07c60d1b7afd
+[2026-03-30T04:14:06.191+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='karaoke_team' AIRFLOW_CTX_DAG_ID='karaoke_pipeline' AIRFLOW_CTX_TASK_ID='ingestion_pyodbc' AIRFLOW_CTX_EXECUTION_DATE='2026-03-30T04:14:04.900291+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-30T04:14:04.900291+00:00'
+[2026-03-30T04:14:06.192+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-30T04:14:06.195+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/karaoke/ingestion && python el.py']
+[2026-03-30T04:14:06.207+0000] {subprocess.py:86} INFO - Output:
+[2026-03-30T04:14:08.029+0000] {subprocess.py:93} INFO - 2026-03-30 04:14:08,029 - INFO - --- Starting Free-Tier Compatible Pipeline ---
+[2026-03-30T04:14:10.690+0000] {subprocess.py:93} INFO - 2026-03-30 04:14:10,690 - INFO - Incremental Load: Fetching dbo.HoaDon_ChiTietHangHoa where created_date > '2116-01-02 08:11:52.000'
+[2026-03-30T04:14:10.853+0000] {subprocess.py:93} INFO - /opt/***/karaoke/ingestion/el.py:115: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2026-03-30T04:14:10.854+0000] {subprocess.py:93} INFO -   chunk_iterator = pd.read_sql(sql_query, conn, chunksize=CHUNKSIZE)
+[2026-03-30T04:14:11.258+0000] {subprocess.py:93} INFO - 2026-03-30 04:14:11,257 - INFO - Successfully Appended 0 rows to raw_hoadon_chitiethanghoa.
+[2026-03-30T04:14:13.136+0000] {subprocess.py:93} INFO - 2026-03-30 04:14:13,135 - INFO - Incremental Load: Fetching dbo.CuaHang where created_date > '2026-03-16 16:50:29.000'
+[2026-03-30T04:14:13.189+0000] {subprocess.py:93} INFO - 2026-03-30 04:14:13,189 - INFO - Uploading chunk 1 (1 rows) directly to caramel-spot-474502-p2.analytics_raw.raw_cuahang...
+[2026-03-30T04:14:26.438+0000] {subprocess.py:93} INFO - 2026-03-30 04:14:26,438 - INFO - 1 out of 1 rows loaded.
+[2026-03-30T04:14:26.439+0000] {subprocess.py:93} INFO - 2026-03-30 04:14:26,438 - INFO - Chunk 1 uploaded successfully.
+[2026-03-30T04:14:26.440+0000] {subprocess.py:93} INFO - 2026-03-30 04:14:26,439 - INFO - Successfully Appended 1 rows to raw_cuahang.
+[2026-03-30T04:14:28.197+0000] {subprocess.py:93} INFO - 2026-03-30 04:14:28,196 - INFO - Incremental Load: Fetching dbo.Ca where created_date > '2026-03-27 12:50:53.000'
+[2026-03-30T04:14:28.272+0000] {subprocess.py:93} INFO - /opt/***/karaoke/ingestion/el.py:115: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2026-03-30T04:14:28.273+0000] {subprocess.py:93} INFO -   chunk_iterator = pd.read_sql(sql_query, conn, chunksize=CHUNKSIZE)
+[2026-03-30T04:14:28.289+0000] {subprocess.py:93} INFO - 2026-03-30 04:14:28,289 - INFO - Uploading chunk 1 (90 rows) directly to caramel-spot-474502-p2.analytics_raw.raw_ca...
+[2026-03-30T04:14:39.877+0000] {subprocess.py:93} INFO - 2026-03-30 04:14:39,877 - INFO - 90 out of 90 rows loaded.
+[2026-03-30T04:14:39.879+0000] {subprocess.py:93} INFO - 2026-03-30 04:14:39,877 - INFO - Chunk 1 uploaded successfully.
+[2026-03-30T04:14:39.879+0000] {subprocess.py:93} INFO - 2026-03-30 04:14:39,878 - INFO - Successfully Appended 90 rows to raw_ca.
+[2026-03-30T04:14:41.864+0000] {subprocess.py:93} INFO - 2026-03-30 04:14:41,864 - INFO - Incremental Load: Fetching dbo.HoaDon where created_date > '2026-03-27 14:36:50.000'
+[2026-03-30T04:14:41.898+0000] {subprocess.py:93} INFO - /opt/***/karaoke/ingestion/el.py:115: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2026-03-30T04:14:41.899+0000] {subprocess.py:93} INFO -   chunk_iterator = pd.read_sql(sql_query, conn, chunksize=CHUNKSIZE)
+[2026-03-30T04:14:51.871+0000] {subprocess.py:93} INFO - 2026-03-30 04:14:51,870 - INFO - Uploading chunk 1 (4785 rows) directly to caramel-spot-474502-p2.analytics_raw.raw_transactions...
+[2026-03-30T04:15:01.310+0000] {subprocess.py:93} INFO - 2026-03-30 04:15:01,310 - INFO - 4785 out of 4785 rows loaded.
+[2026-03-30T04:15:01.311+0000] {subprocess.py:93} INFO - 2026-03-30 04:15:01,310 - INFO - Chunk 1 uploaded successfully.
+[2026-03-30T04:15:01.312+0000] {subprocess.py:93} INFO - 2026-03-30 04:15:01,312 - INFO - Successfully Appended 4785 rows to raw_transactions.
+[2026-03-30T04:15:03.323+0000] {subprocess.py:93} INFO - 2026-03-30 04:15:03,323 - INFO - Incremental Load: Fetching dbo.KhachHang where created_date > '2026-12-31 14:50:36.000'
+[2026-03-30T04:15:03.360+0000] {subprocess.py:93} INFO - /opt/***/karaoke/ingestion/el.py:115: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2026-03-30T04:15:03.361+0000] {subprocess.py:93} INFO -   chunk_iterator = pd.read_sql(sql_query, conn, chunksize=CHUNKSIZE)
+[2026-03-30T04:15:04.077+0000] {subprocess.py:93} INFO - 2026-03-30 04:15:04,076 - INFO - Successfully Appended 0 rows to raw_customer.
+[2026-03-30T04:15:05.805+0000] {subprocess.py:93} INFO - 2026-03-30 04:15:05,805 - INFO - Incremental Load: Fetching dbo.HangHoa where created_date > '2026-03-24 09:28:16.290'
+[2026-03-30T04:15:05.836+0000] {subprocess.py:93} INFO - 2026-03-30 04:15:05,836 - INFO - Successfully Appended 0 rows to raw_hanghoa.
+[2026-03-30T04:15:07.649+0000] {subprocess.py:93} INFO - 2026-03-30 04:15:07,649 - INFO - Incremental Load: Fetching dbo.HoaDon_Combo_HangHoa where created_date > '2084-04-29 05:59:15.000'
+[2026-03-30T04:15:07.708+0000] {subprocess.py:93} INFO - 2026-03-30 04:15:07,708 - INFO - Successfully Appended 0 rows to raw_hoadon_combo_hanghoa.
+[2026-03-30T04:15:09.624+0000] {subprocess.py:93} INFO - 2026-03-30 04:15:09,624 - INFO - Incremental Load: Fetching dbo.HoaDon_GiamGia where created_date > '2026-03-27 14:36:42.000'
+[2026-03-30T04:15:26.335+0000] {subprocess.py:93} INFO - 2026-03-30 04:15:26,334 - INFO - Uploading chunk 1 (3111 rows) directly to caramel-spot-474502-p2.analytics_raw.raw_hoadon_giamgia...
+[2026-03-30T04:15:33.989+0000] {subprocess.py:93} INFO - 2026-03-30 04:15:33,989 - INFO - 3111 out of 3111 rows loaded.
+[2026-03-30T04:15:33.991+0000] {subprocess.py:93} INFO - 2026-03-30 04:15:33,989 - INFO - Chunk 1 uploaded successfully.
+[2026-03-30T04:15:33.991+0000] {subprocess.py:93} INFO - 2026-03-30 04:15:33,990 - INFO - Successfully Appended 3111 rows to raw_hoadon_giamgia.
+[2026-03-30T04:15:34.142+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-03-30T04:15:34.166+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=karaoke_pipeline, task_id=ingestion_pyodbc, execution_date=20260330T041404, start_date=20260330T041405, end_date=20260330T041534
+[2026-03-30T04:15:34.196+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-03-30T04:15:34.210+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

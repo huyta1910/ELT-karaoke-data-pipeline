@@ -1,0 +1,54 @@
+[2026-03-30T02:25:21.195+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: karaoke_pipeline.ingestion_pyodbc manual__2026-03-30T02:10:01.859128+00:00 [queued]>
+[2026-03-30T02:25:21.201+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: karaoke_pipeline.ingestion_pyodbc manual__2026-03-30T02:10:01.859128+00:00 [queued]>
+[2026-03-30T02:25:21.201+0000] {taskinstance.py:2193} INFO - Starting attempt 2 of 3
+[2026-03-30T02:25:21.210+0000] {taskinstance.py:2217} INFO - Executing <Task(BashOperator): ingestion_pyodbc> on 2026-03-30 02:10:01.859128+00:00
+[2026-03-30T02:25:21.214+0000] {standard_task_runner.py:60} INFO - Started process 204 to run task
+[2026-03-30T02:25:21.218+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'karaoke_pipeline', 'ingestion_pyodbc', 'manual__2026-03-30T02:10:01.859128+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/karaoke_pipeline.py', '--cfg-path', '/tmp/tmpz0el0m2_']
+[2026-03-30T02:25:21.221+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask ingestion_pyodbc
+[2026-03-30T02:25:21.297+0000] {task_command.py:423} INFO - Running <TaskInstance: karaoke_pipeline.ingestion_pyodbc manual__2026-03-30T02:10:01.859128+00:00 [running]> on host 22130d062f92
+[2026-03-30T02:25:21.407+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='karaoke_team' AIRFLOW_CTX_DAG_ID='karaoke_pipeline' AIRFLOW_CTX_TASK_ID='ingestion_pyodbc' AIRFLOW_CTX_EXECUTION_DATE='2026-03-30T02:10:01.859128+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-30T02:10:01.859128+00:00'
+[2026-03-30T02:25:21.408+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-30T02:25:21.410+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/karaoke/ingestion && python el.py']
+[2026-03-30T02:25:21.418+0000] {subprocess.py:86} INFO - Output:
+[2026-03-30T02:25:22.737+0000] {subprocess.py:93} INFO - 2026-03-30 02:25:22,737 - INFO - --- Starting Free-Tier Compatible Pipeline ---
+[2026-03-30T02:25:22.737+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-03-30T02:25:22.738+0000] {subprocess.py:93} INFO -   File "/opt/***/karaoke/ingestion/el.py", line 171, in <module>
+[2026-03-30T02:25:22.739+0000] {subprocess.py:93} INFO -     main()
+[2026-03-30T02:25:22.740+0000] {subprocess.py:93} INFO -   File "/opt/***/karaoke/ingestion/el.py", line 163, in main
+[2026-03-30T02:25:22.741+0000] {subprocess.py:93} INFO -     bigquery_client = bigquery.Client(project=GCP_PROJECT_ID)
+[2026-03-30T02:25:22.741+0000] {subprocess.py:93} INFO -                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-03-30T02:25:22.741+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/google/cloud/bigquery/client.py", line 241, in __init__
+[2026-03-30T02:25:22.742+0000] {subprocess.py:93} INFO -     super(Client, self).__init__(
+[2026-03-30T02:25:22.742+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/google/cloud/client/__init__.py", line 321, in __init__
+[2026-03-30T02:25:22.742+0000] {subprocess.py:93} INFO -     Client.__init__(
+[2026-03-30T02:25:22.742+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/google/cloud/client/__init__.py", line 178, in __init__
+[2026-03-30T02:25:22.742+0000] {subprocess.py:93} INFO -     credentials, _ = google.auth.default(scopes=scopes)
+[2026-03-30T02:25:22.742+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-03-30T02:25:22.743+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/google/auth/_default.py", line 718, in default
+[2026-03-30T02:25:22.743+0000] {subprocess.py:93} INFO -     credentials, project_id = checker()
+[2026-03-30T02:25:22.743+0000] {subprocess.py:93} INFO -                               ^^^^^^^^^
+[2026-03-30T02:25:22.743+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/google/auth/_default.py", line 711, in <lambda>
+[2026-03-30T02:25:22.743+0000] {subprocess.py:93} INFO -     lambda: _get_explicit_environ_credentials(quota_project_id=quota_project_id),
+[2026-03-30T02:25:22.743+0000] {subprocess.py:93} INFO -             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-03-30T02:25:22.744+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/google/auth/_default.py", line 353, in _get_explicit_environ_credentials
+[2026-03-30T02:25:22.744+0000] {subprocess.py:93} INFO -     credentials, project_id = load_credentials_from_file(
+[2026-03-30T02:25:22.744+0000] {subprocess.py:93} INFO -                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-03-30T02:25:22.744+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/google/auth/_default.py", line 179, in load_credentials_from_file
+[2026-03-30T02:25:22.744+0000] {subprocess.py:93} INFO -     raise exceptions.DefaultCredentialsError(
+[2026-03-30T02:25:22.744+0000] {subprocess.py:93} INFO - google.auth.exceptions.DefaultCredentialsError: File C:\Users\huytaq\Downloads\karaoke_datapipeline\credentials.jsonAIRFLOW_UID=50000 was not found.
+[2026-03-30T02:25:22.870+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-03-30T02:25:22.880+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-03-30T02:25:22.884+0000] {taskinstance.py:1149} INFO - Marking task as UP_FOR_RETRY. dag_id=karaoke_pipeline, task_id=ingestion_pyodbc, execution_date=20260330T021001, start_date=20260330T022521, end_date=20260330T022522
+[2026-03-30T02:25:22.896+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 9 for task ingestion_pyodbc (Bash command failed. The command returned a non-zero exit code 1.; 204)
+[2026-03-30T02:25:22.916+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-03-30T02:25:22.933+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

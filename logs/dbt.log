@@ -1,0 +1,100 @@
+[0m15:00:08.198188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C36DE18890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C36D90B5F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C36D90A5A0>]}
+
+
+============================== 15:00:08.202149 | 95fbbee6-7347-4d16-9a29-a11e15661396 ==============================
+[0m15:00:08.202149 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:00:08.202149 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\huytaq\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt init warehouse', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m15:00:08.214440 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\huytaq\.dbt
+[0m15:00:08.217092 [debug] [MainThread]: Starter project path: C:\Users\huytaq\Downloads\karaoke_datapipeline\venv\Lib\site-packages\dbt\include\starter_project
+[0m15:00:08.241156 [info ] [MainThread]: 
+Your new dbt project "warehouse" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:00:08.241156 [info ] [MainThread]: Setting up your profile.
+[0m15:04:57.537616 [info ] [MainThread]: Profile warehouse written to C:\Users\huytaq\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m15:04:57.538601 [debug] [MainThread]: Command `dbt init` succeeded at 15:04:57.538601 after 289.45 seconds
+[0m15:04:57.539608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C36DB9CEC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C30A83A210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C30A6C8F80>]}
+[0m15:04:57.539608 [debug] [MainThread]: Flushing usage events
+[0m15:04:58.763620 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:14:26.970940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019BE591F770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019BE5E0B8F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019BE5346000>]}
+
+
+============================== 15:14:26.974574 | ec924116-92e1-4d38-8687-7a23cff5575b ==============================
+[0m15:14:26.974574 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:14:26.975634 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\huytaq\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m15:14:26.989293 [info ] [MainThread]: dbt version: 1.11.7
+[0m15:14:26.990293 [info ] [MainThread]: python version: 3.12.9
+[0m15:14:26.990293 [info ] [MainThread]: python path: C:\Users\huytaq\Downloads\karaoke_datapipeline\venv\Scripts\python.exe
+[0m15:14:26.991293 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m15:14:27.998463 [info ] [MainThread]: Using profiles dir at C:\Users\huytaq\.dbt
+[0m15:14:27.998463 [info ] [MainThread]: Using profiles.yml file at C:\Users\huytaq\.dbt\profiles.yml
+[0m15:14:27.999378 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\huytaq\Downloads\karaoke_datapipeline\dbt_project.yml
+[0m15:14:27.999378 [info ] [MainThread]: adapter type: bigquery
+[0m15:14:27.999378 [info ] [MainThread]: adapter version: 1.11.1
+[0m15:14:28.000376 [info ] [MainThread]: Configuration:
+[0m15:14:28.000376 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:14:28.000376 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m15:14:28.000376 [info ] [MainThread]: Required dependencies:
+[0m15:14:28.001376 [debug] [MainThread]: Executing "git --help"
+[0m15:14:28.032198 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:14:28.033195 [debug] [MainThread]: STDERR: "b''"
+[0m15:14:28.033195 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:14:28.033195 [info ] [MainThread]: Connection:
+[0m15:14:28.034194 [info ] [MainThread]:   method: service-account
+[0m15:14:28.034194 [info ] [MainThread]:   database: caramel-spot-474502-p
+[0m15:14:28.035196 [info ] [MainThread]:   execution_project: caramel-spot-474502-p
+[0m15:14:28.035196 [info ] [MainThread]:   schema: analytics_transform
+[0m15:14:28.036196 [info ] [MainThread]:   location: northamerica-northeast1
+[0m15:14:28.036196 [info ] [MainThread]:   priority: interactive
+[0m15:14:28.036196 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m15:14:28.037195 [info ] [MainThread]:   impersonate_service_account: None
+[0m15:14:28.037195 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m15:14:28.037195 [info ] [MainThread]:   job_retries: 1
+[0m15:14:28.038194 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m15:14:28.038194 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m15:14:28.038194 [info ] [MainThread]:   timeout_seconds: 300
+[0m15:14:28.039194 [info ] [MainThread]:   client_id: None
+[0m15:14:28.039194 [info ] [MainThread]:   token_uri: None
+[0m15:14:28.039194 [info ] [MainThread]:   compute_region: None
+[0m15:14:28.040195 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m15:14:28.040195 [info ] [MainThread]:   gcs_bucket: None
+[0m15:14:28.040195 [info ] [MainThread]:   dataproc_batch: None
+[0m15:14:28.041318 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m15:14:28.245787 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m15:14:28.245787 [debug] [MainThread]: On debug: select 1 as id
+[0m15:14:28.246320 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:14:30.869487 [error] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=caramel-spot-474502-p&j=bq:northamerica-northeast1:5646793b-a503-4525-85dc-d5750794b0ec&page=queryresults
+[0m15:14:30.870991 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m15:14:30.870991 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m15:14:30.872660 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\huytaq\Downloads\karaoke_datapipeline\dbt_project.yml> not found
+
+[0m15:14:30.872660 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Not found: Project caramel-spot-474502-p
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m15:14:30.873664 [debug] [MainThread]: Command `dbt debug` failed at 15:14:30.873664 after 4.02 seconds
+[0m15:14:30.874170 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:14:30.874742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019BE5B7B6E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019B82960AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019B826C9B80>]}
+[0m15:14:30.874742 [debug] [MainThread]: Flushing usage events
+[0m15:14:32.084553 [debug] [MainThread]: An error was encountered while trying to flush usage events
