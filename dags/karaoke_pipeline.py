@@ -18,8 +18,8 @@ with DAG(
     dag_id='karaoke_pipeline',
     default_args=default_args,
     description='Automated orchestration for Karaoke ETL',
-    schedule_interval=None,  # Temporarily disabled schedule so you can trigger it manually!
-    # schedule_interval='0 8,10,16 * * *',  # 08:00, 10:00, 16:00 (UTC+7)
+    # schedule_interval=None,  # Temporarily disabled schedule so you can trigger it manually!
+    schedule_interval='0 8,10,16 * * *',  # 08:00, 10:00, 16:00 (UTC+7)
     catchup=False,
     tags=['karaoke', 'etl'],
 ) as dag:
